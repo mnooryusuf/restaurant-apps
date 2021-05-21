@@ -1,0 +1,35 @@
+@media(max-width:991px){
+    .testi-item{
+        width: calc(50% - 30px);
+    }
+}
+
+@media(max-width:767px){
+    .home-text h1{
+        font-size: 50px;
+        line-height: 65px;
+    }
+
+    .testi-item{
+        width: calc(100% - 30px);
+    }
+
+    .footer-item{
+        width: 100%;
+    }
+
+    .footer-item:not(:last-child){
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:575px){
+
+    .section-title h2{
+        font-size: 24px;
+    }
+
+    .restaurant{
+        padding: 0 10px 30px;
+    }
+}
