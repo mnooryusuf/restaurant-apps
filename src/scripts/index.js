@@ -46,7 +46,9 @@ data.restaurants.forEach((restaurant) => {
                 <h3 tabindex="0">${restaurant.name}</h3>
                 <h4 tabindex="0" class="ratings">Rating: ${restaurant.rating}<i class="fa fa-star"></i></h4>                        
             </div>
-            <p tabindex="0">${restaurant.description}</p>
+            <div class="description">
+                <p tabindex="0">${restaurant.description}</p>
+            </div>
         </div>
     </div>
     `;
