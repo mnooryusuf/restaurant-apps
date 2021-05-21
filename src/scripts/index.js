@@ -37,7 +37,7 @@ window.addEventListener("scroll",function(){
 data.restaurants.forEach((restaurant) => {
     listRestaurantElement.innerHTML += `
     <div class="restaurant-items">
-        <img tabindex="0" src="${restaurant.pictureId}" alt="Image ${restaurant.name}">
+        <img tabindex="0" src="${restaurant.pictureId}" alt="${restaurant.name}">
         <span class="restaurant-address">
             <h4 tabindex="0">${restaurant.city}</h4>
         </span>
