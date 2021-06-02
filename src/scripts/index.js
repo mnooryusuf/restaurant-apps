@@ -43,7 +43,7 @@ data.restaurants.forEach((restaurant) => {
         </span>
         <div class="details">
             <div class="details-sub">
-                <h3 tabindex="0">${restaurant.name}</h3>
+                <h3 tabindex="0"><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h3>
                 <h4 tabindex="0" class="ratings">Rating: ${restaurant.rating}<i class="fa fa-star"></i></h4>                        
             </div>
             <div class="description">
