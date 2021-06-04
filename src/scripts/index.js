@@ -19,7 +19,7 @@ const app = new App({
 const listRestaurantElement = document.querySelector('.restaurant');
 listRestaurantElement.innerHTML = '';
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function scroll() {
   if (this.pageYOffset > 60) {
     this.document.querySelector('.header').classList.add('sticky');
   } else {
