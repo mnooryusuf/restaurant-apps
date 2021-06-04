@@ -3,6 +3,10 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import '../styles/skip-link.css';
 
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
 import data from '../DATA.json';
 
 const navToggler = document.querySelector('.nav-toggler');
