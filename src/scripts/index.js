@@ -1,4 +1,4 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
 import '../styles/skip-link.css';
@@ -8,23 +8,16 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 import data from '../DATA.json';
+import App from './views/app';
 
-const navToggler = document.querySelector('.nav-toggler');
-navToggler.addEventListener('click', toggleNav);
+const app = new App({
+  button: document.querySelector('.nav-toggler'),
+  drawer: document.querySelector('.nav'),
+  content: document.querySelector('#main'),
+});
 
 const listRestaurantElement = document.querySelector('.restaurant');
 listRestaurantElement.innerHTML = '';
-
-function toggleNav() {
-  navToggler.classList.toggle('active');
-  document.querySelector('.nav').classList.toggle('open');
-}
-
-document.addEventListener('click', (e) => {
-  if (e.target.closest('.nav-item')) {
-    toggleNav();
-  }
-});
 
 window.addEventListener('scroll', function () {
   if (this.pageYOffset > 60) {

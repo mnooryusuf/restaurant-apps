@@ -24,20 +24,20 @@ module.exports = {
       {
         test: /\.(svg|png|jpg|gif)$/,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            name: "[name].[hasg].[ext]",
-            outputPath: "imgs"
-          }
-        }
-      }
+            name: '[name].[hasg].[ext]',
+            outputPath: 'imgs',
+          },
+        },
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
-      favicon: 'src/public/images/favicon/favicon.png'
+      favicon: 'src/public/images/favicon/favicon.png',
     }),
     new CopyWebpackPlugin({
       patterns: [
