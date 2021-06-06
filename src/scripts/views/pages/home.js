@@ -1,3 +1,5 @@
+import RestaurantSource from '../../data/restaurant-source';
+
 const Home = {
   async render() {
     return `
@@ -106,6 +108,8 @@ const Home = {
   },
 
   async afterRender() {
+    const restaurant = await RestaurantSource.listRestaurant();
+    console.log(restaurant);
     // Fungsi ini akan dipanggil setelah render()
   },
 };
