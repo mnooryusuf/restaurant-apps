@@ -1,4 +1,5 @@
 import RestaurantSource from '../../data/restaurant-source';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -108,8 +109,11 @@ const Home = {
   },
 
   async afterRender() {
-    const restaurant = await RestaurantSource.listRestaurant();
-    console.log(restaurant);
+    const restaurants = await RestaurantSource.listRestaurant();
+    const restaurantsContainer = document.querySelector('.restaurant');
+    restaurants.forEach((restaurant) => {
+      restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    });
     // Fungsi ini akan dipanggil setelah render()
   },
 };
