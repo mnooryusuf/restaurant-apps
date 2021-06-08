@@ -398,11 +398,11 @@ h6 {
   grid-template-columns: auto auto;
 }
 
-.details-sub h3 a{
+.details-sub h3 a {
   color: var(--white);
 }
 
-.details-sub h3 a:hover{
+.details-sub h3 a:hover {
   color: var(--main-color);
 }
 
@@ -552,3 +552,35 @@ h6 {
   font-size: 14px;
   border-top: 1px solid var(--white-light);
 }
+
+/* Detail */
+/* about section */
+.about-section {
+  background-color: var(--dark-light);
+}
+
+.about-text,
+.about-img {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.about-text h3 {
+  font-size: 30px;
+  text-transform: capitalize;
+  margin: 0 0 15px;
+}
+
+.about-text p {
+  margin: 0 0 15px;
+}
+
+.about-text .btn {
+  margin: 15px 0 0;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
