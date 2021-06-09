@@ -10,6 +10,20 @@
         line-height: 65px;
     }
 
+    .menu-item,
+    .about-text,
+    .about-img{
+        width: 100%;
+    }
+
+    .menu-item:nth-last-of-type(2)::after{
+        border-bottom: 2px dashed var(--dark-light);
+    }
+
+    .about-img{
+        margin-top: 40px;
+    }
+
     .testi-item{
         width: calc(100% - 30px);
     }

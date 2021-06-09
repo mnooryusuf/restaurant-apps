@@ -1,6 +1,11 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantSource from '../../data/restaurant-source';
-import { createRestaurantDetailTemplate, createRestaurantDetailMenuTemplate, createRestaurantDetailReviewTemplate } from '../templates/template-creator';
+import {
+  createRestaurantDetailTemplate,
+  createRestaurantDetailMenuTemplate,
+  createRestaurantDetailReviewTemplate,
+} from '../templates/template-creator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
@@ -41,6 +46,8 @@ const Detail = {
         </div>
     </section>    
     <!-- Testimonials section end -->
+
+    <div id="likeButtonContainer"></div>
       `;
   },
 
@@ -78,6 +85,18 @@ const Detail = {
         menuSection.querySelector('.menu-tab-content.active').classList.remove('active');
         menuSection.querySelector(target).classList.add('active');
       }
+    });
+
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      restaurant: {
+        id: restaurant.id,
+        name: restaurant.name,
+        description: restaurant.description,
+        pictureId: restaurant.pictureId,
+        city: restaurant.city,
+        rating: restaurant.rating,
+      },
     });
   },
 };
