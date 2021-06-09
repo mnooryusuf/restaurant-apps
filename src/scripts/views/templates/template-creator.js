@@ -26,17 +26,21 @@ const createRestaurantDetailTemplate = (restaurant) => `
             </div>
             <div class="row">
                 <div class="about-text">
-                <h3>Welcome To ${restaurant.name}</h3>
-                <h4>City</h4>
-                <p>${restaurant.city}</p>
-                <h4>Address</h4>
-                <p>${restaurant.address}</p>
-                <h4>Categories</h4>
-                <p>${restaurant.categories.map((category) => category.name).join(', ')}</p>
+                <h3 tabindex="0">Welcome To ${restaurant.name}</h3>
+                <h4 tabindex="0">City</h4>
+                <p tabindex="0">${restaurant.city}</p>
+                <h4 tabindex="0">Address</h4>
+                <p tabindex="0">${restaurant.address}</p>
+                <h4 tabindex="0">Categories</h4>
+                <p tabindex="0">${restaurant.categories
+    .map((category) => category.name)
+    .join(', ')}</p>
+                <h4 tabindex="0">Rating</h4>
+                <p tabindex="0">${restaurant.rating}</p>
                 <a href="#our-menu" class="btn btn-default">check our menu</a>
                 </div>
                 <div class="about-img">
-                <img src="${
+                <img tabindex="0" src="${
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
 }" alt="about img" />
                 </div>
@@ -44,6 +48,26 @@ const createRestaurantDetailTemplate = (restaurant) => `
         </div>
     </section>
     <!-- about section end -->
+`;
+
+const createRestaurantDetailMenuTemplate = (menu) => `
+  <div class="menu-item">
+    <div class="menu-item-title">
+        <h3 tabindex="0">${menu.name}</h3>
+    </div>
+  </div>
+`;
+
+const createRestaurantDetailReviewTemplate = (review) => `
+  <div class="testi-item">
+    <div class="testi-author">
+        <div class="testi-author-name">
+            <h3 tabindex="0">${review.name}</h3>
+        </div>
+        <p>${review.date}</p>
+    </div>
+    <p tabindex="0">${review.review}</p>
+  </div>
 `;
 
 const createRestaurantItemTemplate = (restaurant) => `
@@ -70,4 +94,9 @@ const createRestaurantItemTemplate = (restaurant) => `
     </div>
   `;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate };
+export {
+  createRestaurantItemTemplate,
+  createRestaurantDetailTemplate,
+  createRestaurantDetailMenuTemplate,
+  createRestaurantDetailReviewTemplate,
+};
