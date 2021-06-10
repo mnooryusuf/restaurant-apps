@@ -43,6 +43,23 @@ const Detail = {
             </div>
             <div class="row" id="review-item">
             </div>
+            <div class="row" id="input-review">
+            <div class="form">
+                <h3>Thanks for coming</h3>
+                <p>Let's tell your experience!</p>
+                <div class="input-container">
+                  <input id="name" class="input" type="text" placeholder=" " />
+                  <div class="cut cut-short"></div>
+                  <label for="name" class="placeholder">Name</label>
+                </div>
+                <div class="input-container">
+                  <input id="review" class="input" type="text" placeholder=" " />
+                  <div class="cut"></div>
+                  <label for="review" class="placeholder">Review</label>
+                </div>            
+                <button type="text" class="submit">submit</button>
+              </div>
+            </div>
         </div>
     </section>    
     <!-- Testimonials section end -->
@@ -85,6 +102,20 @@ const Detail = {
         menuSection.querySelector('.menu-tab-content.active').classList.remove('active');
         menuSection.querySelector(target).classList.add('active');
       }
+    });
+
+    const inputName = document.querySelector('#name');
+    const inputReview = document.querySelector('#review');
+    const submit = document.querySelector('.submit');
+    submit.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const review = {
+        id: `${restaurant.id}`,
+        name: inputName.value,
+        review: inputReview.value,
+      };
+      console.log(review);
+      await RestaurantSource.postReview(review);
     });
 
     LikeButtonInitiator.init({
