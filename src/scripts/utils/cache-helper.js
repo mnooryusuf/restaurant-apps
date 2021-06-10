@@ -30,7 +30,7 @@ const CacheHelper = {
   async _fetchRequest(request) {
     const response = await fetch(request);
 
-    if (!response || response.status !== 200) {
+    if (!response || response.status !== 200 || request.method === 'POST') {
       return response;
     }
 

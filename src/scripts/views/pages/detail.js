@@ -114,8 +114,8 @@ const Detail = {
         name: inputName.value,
         review: inputReview.value,
       };
-      console.log(review);
       await RestaurantSource.postReview(review);
+      alert('Feedback has been sent thanks for coming');
     });
 
     LikeButtonInitiator.init({
