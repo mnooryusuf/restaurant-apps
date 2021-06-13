@@ -181,10 +181,11 @@ h6 {
   transform: translateY(0%);
 }
 
-.header .logo {
+.header .logo a{
   color: var(--white);
   letter-spacing: 0.05rem;
-  font-size: 15px;
+  font-weight: 700;
+  font-size: 2rem;
   align-items: center;
   padding: 0 15px;
 }
