@@ -154,16 +154,18 @@ h6 {
 
 /* Header Section */
 
-.header {
-  padding: 12px 0;
+.app-bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  padding: 8px 16px;
   position: fixed;
-  left: 0;
   top: 0;
   z-index: 99;
   width: 100%;
 }
 
-.header::before {
+.app-bar::before {
   content: "";
   position: absolute;
   left: 0;
@@ -177,20 +179,16 @@ h6 {
   transform: translateY(-100%);
 }
 
-.header.sticky::before {
+.app-bar.sticky::before {
   transform: translateY(0%);
 }
 
-.header .logo a{
-  color: var(--white);
-  letter-spacing: 0.05rem;
-  font-weight: 700;
-  font-size: 2rem;
+.app-bar .app-bar__menu {
+  display: flex;
   align-items: center;
-  padding: 0 15px;
 }
 
-.header .nav-toggler {
+.app-bar .app-bar__menu button {
   height: 44px;
   width: 44px;
   margin-right: 15px;
@@ -202,19 +200,11 @@ h6 {
   justify-content: center;
 }
 
-.header .nav-toggler:focus {
+.app-bar .app-bar__menu button:focus {
   outline: 4px dashed var(--focus);
 }
 
-.header .nav-toggler.active {
-  position: absolute;
-  right: 0;
-  z-index: 1;
-  transition: all 0.5s ease;
-  transform: translateX(-200px);
-}
-
-.header .nav-toggler span {
+.app-bar .app-bar__menu button span {
   height: 2px;
   width: 30px;
   display: block;
@@ -222,13 +212,13 @@ h6 {
   position: relative;
 }
 
-.header .nav-toggler.active span {
+.app-bar .app-bar__menu button.active span {
   background-color: transparent;
   transition: background-color 0.5s ease;
 }
 
-.header .nav-toggler span::after,
-.header .nav-toggler span::before {
+.app-bar .app-bar__menu button span::after,
+.app-bar .app-bar__menu button span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -238,41 +228,79 @@ h6 {
   background-color: var(--white);
 }
 
-.header .nav-toggler span::before {
+.app-bar .app-bar__menu button span::before {
   transform: translateY(-8px);
 }
 
-.header .nav-toggler.active span::before {
+.app-bar .app-bar__menu button.active span::before {
   transform: rotate(45deg);
   transition: transform 0.5s ease;
 }
 
-.header .nav-toggler span::after {
+.app-bar .app-bar__menu button span::after {
   transform: translateY(8px);
 }
 
-.header .nav-toggler.active span::after {
+.app-bar .app-bar__menu button.active span::after {
   transform: rotate(-45deg);
   transition: transform 0.5s ease;
 }
 
-.header .nav {
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 280px;
-  background-color: var(--dark-light);
-  box-shadow: var(--shadow);
-  overflow-y: auto;
-  padding: 80px 0 40px;
-  transition: transfom 0.5s ease;
-  transform: translateX(100%);
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
 }
 
-.header .nav.open {
-  transform: translateX(0%);
+.app-bar .app-bar__brand a {
+  color: var(--white);
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 2rem;
+  align-items: center;
+  padding: 0 15px;
 }
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+  background-color: var(--dark-light);
+}
+
+.app-bar .app-bar__navigation .nav-item a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 4px 0;
+  font-size: 28px;
+  color: var(--white);  
+  margin-bottom: 5px;
+  width: 100%;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+.app-bar .app-bar__navigation .nav-item a:hover{
+  color: var(--main-color);
+}
+
+.app-bar .app-bar__navigation .nav-item a:focus{
+  outline: 4px dashed var(--focus);
+}
+
+.app-bar .app-bar__navigation.open .nav-item a{
+  padding: 14px;
+  font-size: 22px;
+}
+
+/* 
 
 .header .nav ul li a {
   display: block;
@@ -289,7 +317,7 @@ h6 {
 
 .header .nav ul li a:focus {
   outline: 4px dashed var(--focus);
-}
+} */
 
 /* Home Section */
 

@@ -47,3 +47,29 @@
         padding: 0 10px 30px;
     }
 }
+
+@media screen and (min-width: 650px) {
+    .app-bar {
+        grid-template-columns: 1fr auto;
+    }
+   
+    .app-bar .app-bar__menu {
+        display: none;
+    }
+   
+    .app-bar .app-bar__navigation {
+        position: static;
+        width: 100%;
+    }
+   
+    .app-bar .app-bar__navigation .nav-item {
+        display: inline-block;
+        margin: 0 40px;
+    }
+   
+    .app-bar .app-bar__navigation .nav-item a {
+        display: inline-block;
+        text-align: center;
+        margin: 0;
+    }
+}

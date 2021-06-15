@@ -12,8 +12,8 @@ import App from './views/app';
 import swRegister from './utils/sw-register';
 
 const app = new App({
-  button: document.querySelector('.nav-toggler'),
-  drawer: document.querySelector('.nav'),
+  button: document.querySelector('#hamburgerButton'),
+  drawer: document.querySelector('#navigationDrawer'),
   content: document.querySelector('#main'),
 });
 
@@ -28,8 +28,8 @@ window.addEventListener('load', () => {
 
 window.addEventListener('scroll', function scroll() {
   if (this.pageYOffset > 60) {
-    this.document.querySelector('.header').classList.add('sticky');
+    this.document.querySelector('.app-bar').classList.add('sticky');
   } else {
-    this.document.querySelector('.header').classList.remove('sticky');
+    this.document.querySelector('.app-bar').classList.remove('sticky');
   }
 });
