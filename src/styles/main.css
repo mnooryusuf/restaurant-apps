@@ -98,7 +98,7 @@ h6 {
 }
 
 .section-title h2 {
-  font-size: 35px;
+  font-size: 24px;
   text-transform: capitalize;
 }
 
@@ -300,25 +300,6 @@ h6 {
   font-size: 22px;
 }
 
-/* 
-
-.header .nav ul li a {
-  display: block;
-  font-size: 25px;
-  color: var(--white);
-  padding: 10px 30px;
-  text-transform: capitalize;
-  transition: color 0.3s ease;
-}
-
-.header .nav ul li a:hover {
-  color: var(--main-color);
-}
-
-.header .nav ul li a:focus {
-  outline: 4px dashed var(--focus);
-} */
-
 /* Home Section */
 
 .home-section {
@@ -366,8 +347,10 @@ h6 {
 
 .home-text h1 {
   font-family: Var(--cursive-font);
-  font-size: 60px;
-  line-height: 75px;
+  /* font-size: 60px; */
+  /* line-height: 75px; */
+  font-size: 50px;
+  line-height: 65px;
   margin: 0 0 5px;
 }
 
@@ -384,7 +367,8 @@ h6 {
 .restaurant {
   padding: 0 30px 30px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
+  /* grid-template-columns: repeat(3, minmax(300px, 1fr)); */
   grid-gap: 20px 40px;
 }
 
@@ -462,7 +446,8 @@ h6 {
   padding-bottom: 50px;
 }
 .testi-item {
-  width: calc((100% / 3) - 30px);
+  /* width: calc((100% / 3) - 30px); */
+  width: calc(100% - 30px);
   margin: 0 15px 30px;
   border: 2px solid var(--dark-light);
   padding: 30px;
@@ -502,6 +487,7 @@ h6 {
 
 .testi-item p {
   margin: 15px 0;
+  word-break: break-word;
 }
 
 .testi-item .ratings svg {
@@ -536,9 +522,14 @@ h6 {
 }
 
 .footer-item {
-  width: calc(100% / 3);
+  /* width: calc(100% / 3); */
+  width: 100%;
   padding: 0 15px;
   text-align: center;
+}
+
+.footer-item:not(:last-child){
+  margin-bottom: 30px;
 }
 
 .footer-item h3 {
@@ -591,8 +582,13 @@ h6 {
 
 .about-text,
 .about-img {
-  width: 50%;
+  /* width: 50%; */
+  width: 100%;
   padding: 0 15px;
+}
+
+.about-img{
+  margin-top: 40px;
 }
 
 .about-text h3 {
@@ -633,7 +629,7 @@ h6 {
 }
 
 .menu-tab-item{
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: inherit;
   text-transform: capitalize;
   border: none;
@@ -658,7 +654,8 @@ h6 {
 }
 
 .menu-item{
-  width: 50%;
+  /* width: 50%; */
+  width: 100%;
   padding: 20px 15px;
   display: flex;
   align-items: center;
@@ -675,7 +672,7 @@ h6 {
   border-bottom: 2px dashed var(--dark-light);
 }
 
-.menu-item:nth-last-of-type(2)::after,
+/* .menu-item:nth-last-of-type(2)::after, */
 .menu-item:nth-last-of-type(1)::after{
   border: none;
 }

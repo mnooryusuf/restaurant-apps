@@ -9,7 +9,6 @@ const createRestaurantDetailTemplate = (restaurant) => `
                 <div class="home-text">
                     <h1 tabindex="0">${restaurant.name}</h1>
                     <p tabindex="0">${restaurant.description}</p>
-                    <a href="#about" class="btn btn-default">our restaurant</a>
                 </div>
             </div>
         </div>
@@ -37,7 +36,6 @@ const createRestaurantDetailTemplate = (restaurant) => `
     .join(', ')}</p>
                 <h4 tabindex="0">Rating</h4>
                 <p tabindex="0">${restaurant.rating}</p>
-                <a href="#our-menu" class="btn btn-default">check our menu</a>
                 </div>
                 <div class="about-img">
                 <img tabindex="0" src="${
