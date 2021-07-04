@@ -88,9 +88,9 @@ const Detail = {
     });
 
     const reviewsContainer = document.querySelector('#review-item');
-    const reviews = await restaurant.customerReviews;
-    reviews.forEach((review) => {
-      reviewsContainer.innerHTML += createRestaurantDetailReviewTemplate(review);
+    let reviews = await restaurant.customerReviews;
+    reviews.forEach((reviewItem) => {
+      reviewsContainer.innerHTML += createRestaurantDetailReviewTemplate(reviewItem);
     });
 
     const menuTabs = document.querySelector('.menu-tabs');
@@ -115,7 +115,11 @@ const Detail = {
         name: inputName.value,
         review: inputReview.value,
       };
-      await RestaurantSource.postReview(review);
+      const newReview = await RestaurantSource.postReview(review);
+      reviews = await newReview.customerReviews;
+      reviews.forEach((reviewItem) => {
+        reviewsContainer.innerHTML += createRestaurantDetailReviewTemplate(reviewItem);
+      });
       alert('Feedback has been sent thanks for coming');
     });
 
