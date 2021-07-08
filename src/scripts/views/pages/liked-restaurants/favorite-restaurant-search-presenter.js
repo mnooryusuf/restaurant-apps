@@ -12,10 +12,14 @@ class FavoriteRestaurantSearchPresenter {
   }
 
   async _searchRestaurants(latestQuery) {
-    this._latestQuery = latestQuery;
+    this._latestQuery = latestQuery.trim();
 
-    const foundRestaurants = await this._favoriteRestaurants.searchRestaurants(this.latestQuery);
-
+    let foundRestaurants;
+    if (this.latestQuery.length > 0) {
+      foundRestaurants = await this._favoriteRestaurants.searchRestaurants(this.latestQuery);
+    } else {
+      foundRestaurants = await this._favoriteRestaurants.getAllRestaurants();
+    }
     this._showFoundRestaurants(foundRestaurants);
   }
 
