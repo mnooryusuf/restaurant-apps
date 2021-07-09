@@ -1,9 +1,11 @@
 import FavoriteRestaurantSearchPresenter from '../src/scripts/views/pages/liked-restaurants/favorite-restaurant-search-presenter';
 import FavoriteRestaurantIdb from '../src/scripts/data/favoriterestaurant-idb';
+import FavoriteRestaurantSearchView from '../src/scripts/views/pages/liked-restaurants/favorite-restaurant-search-view';
 
 describe('Searching restaurants', () => {
   let presenter;
   let favoriteRestaurants;
+  let view;
 
   const searchRestaurants = (query) => {
     const queryElement = document.getElementById('query');
@@ -12,21 +14,15 @@ describe('Searching restaurants', () => {
   };
 
   const setRestaurantSearchContainer = () => {
-    document.body.innerHTML = `
-        <div id="restaurant-search-container">
-            <input id="query" type="text">
-            <div class="restaurant-result-container">
-                <ul class="restaurants">
-                </ul>
-            </div>
-        </div>
-        `;
+    view = new FavoriteRestaurantSearchView();
+    document.body.innerHTML = view.getTemplate();
   };
 
   const constructPresenter = () => {
     favoriteRestaurants = spyOnAllFunctions(FavoriteRestaurantIdb);
     presenter = new FavoriteRestaurantSearchPresenter({
       favoriteRestaurants,
+      view,
     });
   };
 
