@@ -8,7 +8,7 @@ describe('Showing all favorite restaurants', () => {
   let view;
   const renderTemplate = () => {
     view = new FavoriteRestaurantSearchView();
-    document.body.innerHTML = view.getFavoriteRestaurantTemplate();
+    document.body.innerHTML = view.getTemplate();
   };
 
   beforeEach(() => {
@@ -28,7 +28,7 @@ describe('Showing all favorite restaurants', () => {
     });
 
     it('should show the information that no restaurants have been liked', (done) => {
-      document.getElementById('restaurants').addEventListener('restaurants:updated', () => {
+      document.querySelector('.restaurants').addEventListener('restaurants:updated', () => {
         expect(document.querySelectorAll('.restaurant-item__not__found').length)
           .toEqual(1);
 
@@ -46,7 +46,7 @@ describe('Showing all favorite restaurants', () => {
 
     describe('When favorite restaurants exist', () => {
       it('should show the restaurants', (done) => {
-        document.getElementById('restaurants').addEventListener('restaurants:updated', () => {
+        document.querySelector('.restaurants').addEventListener('restaurants:updated', () => {
           expect(document.querySelectorAll('.restaurant-items').length).toEqual(2);
           done();
         });

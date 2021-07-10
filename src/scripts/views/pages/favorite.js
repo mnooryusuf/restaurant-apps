@@ -13,7 +13,7 @@ const Favorite = {
                 </div>
             </div>
             <div class="row ">
-                <div class="restaurant">
+                <div class="restaurants">
                 </div>
             </div>               
         </div>
@@ -24,7 +24,7 @@ const Favorite = {
 
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
-    const restaurantsContainer = document.querySelector('.restaurant');
+    const restaurantsContainer = document.querySelector('.restaurants');
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });

@@ -72,21 +72,20 @@ const createRestaurantItemTemplate = (restaurant) => `
     <div class="restaurant-items">
         <img tabindex="0" src="${
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
-}" alt="${restaurant.name}">
+}" alt="${restaurant.name || '-'}">
         <span class="restaurant-address">
-            <h4 tabindex="0">${restaurant.city}</h4>
+            <h4 tabindex="0">${restaurant.city || '-'}</h4>
         </span>
         <div class="details">
             <div class="details-sub">
-                <h3 tabindex="0"><a href="${`/#/detail/${restaurant.id}`}">${
-  restaurant.name
-}</a></h3>                                       
+                <h3 class="restaurant__name" tabindex="0"><a href="${`/#/detail/${restaurant.id}`}">${
+  restaurant.name || '-'}</a></h3>                                       
             </div>
             <div class="description">
-                <p tabindex="0">${restaurant.description}</p>
+                <p tabindex="0">${restaurant.description || '-'}</p>
             </div>
             <h4 tabindex="0" class="ratings">Rating: ${
-  restaurant.rating
+  restaurant.rating || '-'
 }<i class="fa fa-star"></i></h4> 
         </div>
     </div>
