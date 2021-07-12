@@ -53,9 +53,9 @@ describe('Searching restaurants', () => {
       });
 
       favoriteRestaurants.searchRestaurants.withArgs('restaurant a').and.returnValues([
-        { id: 111, title: 'restaurant abc' },
-        { id: 222, title: 'ada juga restaurant abcde' },
-        { id: 333, title: 'ini juga boleh restaurant a' },
+        { id: 111, name: 'restaurant abc' },
+        { id: 222, name: 'ada juga restaurant abcde' },
+        { id: 333, name: 'ini juga boleh restaurant a' },
       ]);
 
       searchRestaurants('restaurant a');
@@ -63,7 +63,7 @@ describe('Searching restaurants', () => {
 
     it('should show the name of the restaurants found by Favorite Restaurants', (done) => {
       document.querySelector('.restaurants').addEventListener('restaurants:updated', () => {
-        const restaurantTitles = document.querySelectorAll('.restaurant__name');
+        const restaurantTitles = document.querySelectorAll('.restaurant__title');
         expect(restaurantTitles.item(0).textContent).toEqual('restaurant abc');
         expect(restaurantTitles.item(1).textContent).toEqual('ada juga restaurant abcde');
         expect(restaurantTitles.item(2).textContent).toEqual('ini juga boleh restaurant a');
@@ -82,7 +82,7 @@ describe('Searching restaurants', () => {
 
     it('should show - when the restaurant returned does not contain a title', (done) => {
       document.querySelector('.restaurants').addEventListener('restaurants:updated', () => {
-        const restaurantTitles = document.querySelectorAll('.restaurant__name');
+        const restaurantTitles = document.querySelectorAll('.restaurant__title');
         expect(restaurantTitles.item(0).textContent).toEqual('-');
 
         done();
