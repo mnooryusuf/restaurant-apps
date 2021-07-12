@@ -7,7 +7,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
         <div class="container">
             <div class="row min-vh-100 align-item-center">
                 <div class="home-text">
-                    <h1 tabindex="0">${restaurant.name}</h1>
+                    <h1  tabindex="0" class="restaurant__title">${restaurant.name}</h1>
                     <p tabindex="0">${restaurant.description}</p>
                 </div>
             </div>
@@ -78,7 +78,7 @@ const createRestaurantItemTemplate = (restaurant) => `
         </span>
         <div class="details">
             <div class="details-sub">
-                <h3 class="restaurant__title" tabindex="0"><a href="${`/#/detail/${restaurant.id}`}">${
+                <h3  tabindex="0" class="restaurant__title"><a href="${`/#/detail/${restaurant.id}`}">${
   restaurant.name || '-'}</a></h3>                                       
             </div>
             <div class="description">
