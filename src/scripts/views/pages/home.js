@@ -28,7 +28,7 @@ const Home = {
                 </div>
             </div>
             <div class="row ">
-                <div class="restaurant">
+                <div class="restaurants">
                 </div>
             </div>               
         </div>
@@ -110,7 +110,7 @@ const Home = {
 
   async afterRender() {
     const restaurants = await RestaurantSource.listRestaurant();
-    const restaurantsContainer = document.querySelector('.restaurant');
+    const restaurantsContainer = document.querySelector('.restaurants');
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });

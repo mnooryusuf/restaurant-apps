@@ -5,12 +5,12 @@ class FavoriteRestaurantSearchView {
     return `
     <section class="explore-section sec-padding" id="explore">
         <div class="container">
+        <div class="row">
+        <div class="section-title" >
+        <h2 id="maincontent" tabindex="0" data-title="explore">Favorite Restaurant</h2>
+        </div>
         <input id="query" type="text">
-            <div class="row">
-                <div class="section-title" >
-                    <h2 id="maincontent" tabindex="0" data-title="explore">Favorite Restaurant</h2>
-                </div>
-            </div>
+        </div>
             <div class="row ">
                 <div class="restaurants">
                 </div>
