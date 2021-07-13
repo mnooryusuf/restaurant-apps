@@ -38,7 +38,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
                 <p tabindex="0">${restaurant.rating}</p>
                 </div>
                 <div class="about-img">
-                <img tabindex="0" src="${
+                <img class="lazyload"  tabindex="0" src="${
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
 }" alt="${restaurant.name}" />
                 </div>
@@ -70,7 +70,7 @@ const createRestaurantDetailReviewTemplate = (review) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
     <div class="restaurant-items">
-        <img tabindex="0" src="${
+        <img class="lazyload" tabindex="0" src="${
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
 }" alt="${restaurant.name || '-'}">
         <span class="restaurant-address">
