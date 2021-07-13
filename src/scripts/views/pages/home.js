@@ -59,11 +59,11 @@ const Home = {
                     </div>
                     <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam architecto, eius cum ad voluptatum esse explicabo doloribus.</p>
                     <div tabindex="0" class="ratings">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
                     </div>
                 </div>
                 <div class="testi-item">
@@ -81,11 +81,11 @@ const Home = {
                     </div>
                     <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam architecto, eius cum ad voluptatum esse explicabo doloribus.</p>
                     <div tabindex="0" class="ratings">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
                     </div>
                 </div>
                 <div class="testi-item">
@@ -103,11 +103,11 @@ const Home = {
                     </div>
                     <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam architecto, eius cum ad voluptatum esse explicabo doloribus.</p>
                     <div tabindex="0" class="ratings">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
                     </div>
                 </div>
             </div>

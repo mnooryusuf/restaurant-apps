@@ -13,14 +13,14 @@ fs.readdirSync(target)
   .forEach((image) => {
     // mengubah ukuran gambar dengan lebar 800px, dengan prefix -large.jpg
     sharp(`${target}/${image}`)
-      .resize(480)
+      .resize(400, 400)
       .toFile(path.resolve(__dirname, `${destination}/${image.split('.')
         .slice(0, -1)
         .join('.')}-large.jpg`));
 
     // mengubah ukuran gambar dengan lebar 480px, dengan prefix -small.jpg
     sharp(`${target}/${image}`)
-      .resize(200)
+      .resize(100, 100)
       .toFile(path.resolve(__dirname, `${destination}/${image.split('.')
         .slice(0, -1)
         .join('.')}-small.jpg`));
