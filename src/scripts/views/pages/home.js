@@ -51,8 +51,11 @@ const Home = {
                             <span tabindex="0">food specialist</span>
                         </div>
                         <div class="testi-author-img">
-                            <img tabindex="0" src="images/testimonials/harishan.jpg" alt="testi author img">
-                        </div>
+                        <picture>
+                             <source media="(max-width: 600px)" srcset="./images/harishan-small.jpg">
+                            <img tabindex="0" src="./images/harishan-large.jpg" alt="testi author img">
+                        </picture>
+                            </div>
                     </div>
                     <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam architecto, eius cum ad voluptatum esse explicabo doloribus.</p>
                     <div tabindex="0" class="ratings">
@@ -70,7 +73,10 @@ const Home = {
                             <span tabindex="0">food specialist</span>
                         </div>
                         <div class="testi-author-img">
-                            <img tabindex="0" src="images/testimonials/lisa.jpg" alt="testi author img">
+                            <picture>
+                            <source media="(max-width: 600px)" srcset="./images/lisa-large-small.jpg">
+                            <img tabindex="0" src="./images/lisa-large.jpg" alt="testi author img">
+                            </picture>
                         </div>
                     </div>
                     <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam architecto, eius cum ad voluptatum esse explicabo doloribus.</p>
@@ -89,7 +95,10 @@ const Home = {
                             <span tabindex="0">food specialist</span>
                         </div>
                         <div class="testi-author-img">
-                            <img tabindex="0" src="images/testimonials/luis.jpg" alt="testi author img">
+                            <picture>
+                            <source media="(max-width: 600px)" srcset="./images/luis-small.jpg">
+                            <img tabindex="0" src="./images/luis-large.jpg" alt="testi author img">
+                            </picture>
                         </div>
                     </div>
                     <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam architecto, eius cum ad voluptatum esse explicabo doloribus.</p>
