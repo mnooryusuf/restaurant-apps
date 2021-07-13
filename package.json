@@ -6,7 +6,8 @@
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
-    "e2e": "codeceptjs run --steps"
+    "e2e": "codeceptjs run --steps",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Muhammad_Noor_Yusuf <mnyusuf14@gmail.com>",
@@ -23,6 +24,8 @@
     "eslint-plugin-import": "^2.23.4",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.3.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^3.5.0",
     "karma": "^5.1.0",
