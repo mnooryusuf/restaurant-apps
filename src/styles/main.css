@@ -325,7 +325,7 @@ h6 {
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: url("../public/images/heros/hero-image_2.jpg");
+  /* background-image: url("../public/images/heros/hero-image_2.jpg"); */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -361,7 +361,7 @@ h6 {
 /* explore section */
 
 .explore-section {
-  background-color: var(--dark-light);
+  background-color: var(--dark);
 }
 
 .restaurants {
@@ -378,6 +378,7 @@ h6 {
   grid-template-rows: auto 1fr;
   border-radius: 15px;
   box-shadow: var(--shadow);
+  background-color: var(--dark-light);
 }
 
 .restaurant-items img {
@@ -393,10 +394,14 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--main-color);
+  background-color: var(--dark-light);
   padding: 0.4em 1.3em;
   border-radius: 15px 0;
   z-index: 1;
+}
+
+.restaurant-address h3{
+  font-size: 20px;
 }
 
 .details {
@@ -418,6 +423,10 @@ h6 {
 
 .details-sub h3 a:hover {
   color: var(--main-color);
+}
+
+.ratings{
+  font-size: 16px;
 }
 
 .ratings .fa {
@@ -442,7 +451,7 @@ h6 {
 
 /* testimonials */
 .testimonials-section {
-  background-color: var(--dark);
+  background-color: var(--dark-light);
   padding-bottom: 50px;
 }
 .testi-item {
@@ -503,7 +512,7 @@ h6 {
 /* footer */
 .footer {
   padding: 80px 0 0;
-  background-image: url("../public/images/heros/hero-image_4.jpg");
+  /* background-image: url("../public/images/heros/hero-image_4.jpg"); */
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

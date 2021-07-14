@@ -6,7 +6,7 @@ const Home = {
     return `
     <!-- Jombutron start-->
     <section class="home-section" id="home">
-        <div class="home-bg"></div>
+        <div class="home-bg lazyload" data-bg="./images/heros/hero-image_2.jpg"></div>
         <div class="container">
             <div class="row min-vh-100 align-item-center">
                 <div class="home-text">
@@ -74,7 +74,7 @@ const Home = {
                         </div>
                         <div class="testi-author-img">
                             <picture>
-                            <source media="(max-width: 600px)" srcset="./images/lisa-large-small.jpg">
+                            <source media="(max-width: 600px)" srcset="./images/lisa-small.jpg">
                             <img class="lazyload"  tabindex="0" src="./images/lisa-large.jpg" alt="testi author img">
                             </picture>
                         </div>

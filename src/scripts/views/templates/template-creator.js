@@ -74,7 +74,7 @@ const createRestaurantItemTemplate = (restaurant) => `
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
 }" alt="${restaurant.name || '-'}">
         <span class="restaurant-address">
-            <h4 tabindex="0">${restaurant.city || '-'}</h4>
+            <h3 tabindex="0">${restaurant.city || '-'}</h3>
         </span>
         <div class="details">
             <div class="details-sub">
