@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 const createRestaurantDetailTemplate = (restaurant) => `
     <!-- Jombutron start-->
     <section class="home-section" id="home">
-        <div class="home-bg lazyload" data-bg="./images/hero-image_2-small.jpg"></div>
+        <div class="home-bg lazyload"></div>
         <div class="container">
             <div class="row min-vh-100 align-item-center">
                 <div class="home-text">

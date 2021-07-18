@@ -28,7 +28,7 @@
   }
 
   .home-section .home-bg{
-    background-image: url(../public/images/jpg/hero-image_2.jpg);
+    background-image: url(/images/hero-image_2-large.jpg);
   }
 
   .home-text {
@@ -60,7 +60,7 @@
   }
 
   .footer{
-    background-image: url(../public/images/jpg/hero-image_4.jpg);
+    background-image: url(/images/hero-image_4-large.jpg);
   }
 
   .footer-item {

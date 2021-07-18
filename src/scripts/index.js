@@ -8,7 +8,6 @@ import swRegister from './utils/sw-register';
 
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
-import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 
 const app = new App({
   button: document.querySelector('#hamburgerButton'),
