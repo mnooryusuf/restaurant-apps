@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 const createRestaurantDetailTemplate = (restaurant) => `
     <!-- Jombutron start-->
     <section class="home-section" id="home">
-        <div class="home-bg"></div>
+        <div class="home-bg lazyload" data-bg="./images/hero-image_2-small.jpg"></div>
         <div class="container">
             <div class="row min-vh-100 align-item-center">
                 <div class="home-text">
@@ -38,7 +38,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
                 <p tabindex="0">${restaurant.rating}</p>
                 </div>
                 <div class="about-img">
-                <img class="lazyload"  tabindex="0" src="${
+                <img class="lazyload"  tabindex="0" data-src="${
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
 }" alt="${restaurant.name}" />
                 </div>
@@ -68,9 +68,34 @@ const createRestaurantDetailReviewTemplate = (review) => `
   </div>
 `;
 
+const createSkeletonMovieTemplate = (count) => {
+  let template = '';
+
+  for (let i = 0; i < count; i += 1) {
+    template += `
+      <div class="restaurant-items">
+        <img tabindex="0" data-src="./images/placeholder.png" alt="skeleton">
+        <span class="restaurant-address">
+            <h3 class="skeleton" tabindex="0">Lorem ipsum</h3>
+        </span>
+        <div class="details">
+            <div class="details-sub">
+                <h3  tabindex="0" class="skeleton">Lorem ipsum dolor sit.</h3>                                       
+            </div>
+            <div class="description">
+                <p class="skeleton" tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
+            </div>
+            <h4 class="skeleton" tabindex="0" class="ratings">Rating: Lorem</h4> 
+        </div>
+    </div>
+  `;
+  }
+  return template;
+};
+
 const createRestaurantItemTemplate = (restaurant) => `
     <div class="restaurant-items">
-        <img class="lazyload" tabindex="0" src="${
+        <img class="lazyload" tabindex="0" data-src="${
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
 }" alt="${restaurant.name || '-'}">
         <span class="restaurant-address">
@@ -104,6 +129,7 @@ const createUnlikeRestaurantButtonTemplate = () => `
 `;
 
 export {
+  createSkeletonMovieTemplate,
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
   createRestaurantDetailMenuTemplate,

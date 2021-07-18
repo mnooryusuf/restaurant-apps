@@ -1,4 +1,7 @@
-import { createRestaurantItemTemplate } from '../../templates/template-creator';
+import {
+  createRestaurantItemTemplate,
+  createSkeletonMovieTemplate,
+} from '../../templates/template-creator';
 
 class FavoriteRestaurantSearchView {
   getTemplate() {
@@ -6,13 +9,20 @@ class FavoriteRestaurantSearchView {
     <section class="explore-section sec-padding" id="explore">
         <div class="container">
         <div class="row">
-        <div class="section-title" >
-        <h2 id="maincontent" tabindex="0" data-title="explore">Favorite Restaurant</h2>
-        </div>
-        <input id="query" type="text">
-        </div>
+          <div class="section-title" >
+          <h2 id="maincontent" tabindex="0" data-title="explore">Favorite Restaurant</h2>
+          <div class="search-input">
+          <div class="input-container">
+            <input id="query" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="query" class="placeholder">Cari Restaurant</label>
+          </div>  
+          </div>  
+          </div>
+          </div>
             <div class="row ">
                 <div class="restaurants">
+                ${createSkeletonMovieTemplate(20)}
                 </div>
             </div>               
         </div>
@@ -29,6 +39,7 @@ class FavoriteRestaurantSearchView {
   showFavoriteRestaurants(restaurants = []) {
     let html;
     if (restaurants.length) {
+      html = '';
       html = restaurants.reduce((carry, restaurant) => carry.concat(createRestaurantItemTemplate(restaurant)), '');
     } else {
       html = this._getEmptyRestaurantTemplate();

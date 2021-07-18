@@ -1,12 +1,15 @@
 import RestaurantSource from '../../data/restaurant-source';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+import {
+  createRestaurantItemTemplate,
+  createSkeletonMovieTemplate,
+} from '../templates/template-creator';
 
 const Home = {
   async render() {
     return `
     <!-- Jombutron start-->
     <section class="home-section" id="home">
-        <div class="home-bg lazyload" data-bg="./images/heros/hero-image_2.jpg"></div>
+        <div class="home-bg lazyload" data-bg="./images/hero-image_2-small.jpg"></div>
         <div class="container">
             <div class="row min-vh-100 align-item-center">
                 <div class="home-text">
@@ -29,6 +32,7 @@ const Home = {
             </div>
             <div class="row ">
                 <div class="restaurants">
+                ${createSkeletonMovieTemplate(20)}
                 </div>
             </div>               
         </div>
@@ -53,7 +57,7 @@ const Home = {
                         <div class="testi-author-img">
                         <picture>
                              <source media="(max-width: 600px)" srcset="./images/harishan-small.jpg">
-                            <img class="lazyload"  tabindex="0" src="./images/harishan-large.jpg" alt="testi author img">
+                            <img class="lazyload"  tabindex="0" data-src="./images/harishan-large.jpg" alt="testi author img">
                         </picture>
                             </div>
                     </div>
@@ -75,7 +79,7 @@ const Home = {
                         <div class="testi-author-img">
                             <picture>
                             <source media="(max-width: 600px)" srcset="./images/lisa-small.jpg">
-                            <img class="lazyload"  tabindex="0" src="./images/lisa-large.jpg" alt="testi author img">
+                            <img class="lazyload"  tabindex="0" data-src="./images/lisa-large.jpg" alt="testi author img">
                             </picture>
                         </div>
                     </div>
@@ -97,7 +101,7 @@ const Home = {
                         <div class="testi-author-img">
                             <picture>
                             <source media="(max-width: 600px)" srcset="./images/luis-small.jpg">
-                            <img class="lazyload"  tabindex="0" src="./images/luis-large.jpg" alt="testi author img">
+                            <img class="lazyload"  tabindex="0" data-src="./images/luis-large.jpg" alt="testi author img">
                             </picture>
                         </div>
                     </div>
@@ -120,6 +124,7 @@ const Home = {
   async afterRender() {
     const restaurants = await RestaurantSource.listRestaurant();
     const restaurantsContainer = document.querySelector('.restaurants');
+    restaurantsContainer.innerHTML = '';
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });

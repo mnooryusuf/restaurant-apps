@@ -27,7 +27,17 @@
     font-size: 35px;
   }
 
+  .home-section .home-bg{
+    background-image: url(../public/images/jpg/hero-image_2.jpg);
+  }
+
+  .home-text {
+    margin: auto;
+    max-width: 700px;
+  }
+
   .restaurants {
+    padding: 0 15px 30px;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -49,19 +59,28 @@
     width: calc(50% - 30px);
   }
 
+  .footer{
+    background-image: url(../public/images/jpg/hero-image_4.jpg);
+  }
+
   .footer-item {
     width: calc(100% / 3);
   }
 
-  .footer-item:not(:last-child) {
+    .footer-item:not(:last-child) {
     margin-bottom: 0px;
   }
 }
 
 @media screen and (min-width: 850px) {
   .home-text h1 {
-    font-size: 60px;
+    font-size: 4em;
     line-height: 75px;
+  }
+
+  .home-text p {
+    font-size: 1em;
+    margin: 0 0 30px;
   }
 }
 
@@ -69,7 +88,7 @@
   .app-bar .app-bar__navigation .nav-item {
     margin: 0 30px;
   }
-  
+
   .restaurants {
     grid-template-columns: repeat(3, 1fr);
   }
