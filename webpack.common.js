@@ -84,14 +84,14 @@ module.exports = {
     new ImageminWebpackPlugin({
       plugins: [
         ImageminMozjpeg({
-          quality: 50,
+          quality: 30,
           progressive: true,
         }),
       ],
     }),
     new BundleAnalyzerPlugin({
-      analyzerMode: "static", 
-      openAnalyzer: false
-    })
+      analyzerMode: 'static',
+      openAnalyzer: false,
+    }),
   ],
 };

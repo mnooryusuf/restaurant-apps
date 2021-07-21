@@ -56,8 +56,7 @@ const Home = {
                         </div>
                         <div class="testi-author-img">
                         <picture>
-                             <source media="(max-width: 600px)" srcset="./images/harishan-small.jpg">
-                            <img class="lazyload"  tabindex="0" data-src="./images/harishan-large.jpg" alt="testi author img">
+                            <img class="lazyload"  tabindex="0" data-src="./images/harishan-sharp.jpg" alt="testi author img">
                         </picture>
                             </div>
                     </div>
@@ -78,8 +77,7 @@ const Home = {
                         </div>
                         <div class="testi-author-img">
                             <picture>
-                            <source media="(max-width: 600px)" srcset="./images/lisa-small.jpg">
-                            <img class="lazyload"  tabindex="0" data-src="./images/lisa-large.jpg" alt="testi author img">
+                            <img class="lazyload"  tabindex="0" data-src="./images/lisa-sharp.jpg" alt="testi author img">
                             </picture>
                         </div>
                     </div>
@@ -100,8 +98,7 @@ const Home = {
                         </div>
                         <div class="testi-author-img">
                             <picture>
-                            <source media="(max-width: 600px)" srcset="./images/luis-small.jpg">
-                            <img class="lazyload"  tabindex="0" data-src="./images/luis-large.jpg" alt="testi author img">
+                            <img class="lazyload"  tabindex="0" data-src="./images/luis-sharp.jpg" alt="testi author img">
                             </picture>
                         </div>
                     </div>
