@@ -103,7 +103,7 @@ const createRestaurantItemTemplate = (restaurant) => `
         </span>
         <div class="details">
             <div class="details-sub">
-                <h3  tabindex="0" class="restaurant__title"><a href="${`/#/detail/${restaurant.id}`}">${
+                <h3  tabindex="0" class="restaurant__title"><a href="${`/#/detail/${restaurant.id}`}" aria-label="link to ${restaurant.name || '-'}">${
   restaurant.name || '-'}</a></h3>                                       
             </div>
             <div class="description">

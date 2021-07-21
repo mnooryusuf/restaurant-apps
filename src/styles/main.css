@@ -837,7 +837,7 @@ h6 {
 }
 
 .restaurant-item__not__found{
-  padding-left: 90px;
+  margin: 0 90px;
 }
 
 .skeleton {

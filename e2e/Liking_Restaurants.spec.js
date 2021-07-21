@@ -19,7 +19,9 @@ Scenario('liking one restaurant', async ({ I }) => {
   I.seeElement('.restaurant__title a');
   const firstRestaurant = locate('.restaurant__title a').first();
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
-  I.click(firstRestaurant);
+  // I.click(firstRestaurant);
+  const firstRestaurantHref = await I.grabAttributeFrom(firstRestaurant, 'href');
+  I.amOnPage(firstRestaurantHref);
 
   I.seeElement('#likeButton');
   I.click('#likeButton');
@@ -40,7 +42,9 @@ Scenario('unliking one restaurant', async ({ I }) => {
   I.seeElement('.restaurant__title a');
   const firstRestaurant = locate('.restaurant__title a').first();
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
-  I.click(firstRestaurant);
+  // I.click(firstRestaurant);
+  const firstRestaurantHref = await I.grabAttributeFrom(firstRestaurant, 'href');
+  I.amOnPage(firstRestaurantHref);
 
   I.seeElement('#likeButton');
   I.click('#likeButton');
@@ -72,7 +76,9 @@ Scenario('searching restaurants', async ({ I }) => {
   const titles = [];
 
   for (let i = 1; i <= 3; i++) {
-    I.click(locate('.restaurant__title a').at(i));
+    const clickRestaurant = locate('.restaurant__title a').at(i);
+    const clickRestaurantHref = await I.grabAttributeFrom(clickRestaurant, 'href');
+    I.amOnPage(clickRestaurantHref);
     I.seeElement('#likeButton');
     I.click('#likeButton');
     titles.push(await I.grabTextFrom('.restaurant__title'));

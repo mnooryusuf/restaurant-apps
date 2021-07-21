@@ -26,9 +26,9 @@ const Detail = {
                         <button type="button" class="menu-tab-item" data-target="#drinks">drinks</button>
                     </div>
                 </div>
-                <div class="row menu-tab-content active" id="foods">
+                <div class="row menu-tab-content active" id="foods" aria-label="show foods">
                 </div>
-                <div class="row menu-tab-content" id="drinks">
+                <div class="row menu-tab-content" id="drinks" aria-label="shows drinks">
                 </div>
             </div>
         </section>
@@ -58,7 +58,7 @@ const Detail = {
                   <div class="cut"></div>
                   <label for="review" class="placeholder">Review</label>
                 </div>            
-                <button type="text" class="submit">submit</button>
+                <button type="text" class="submit" aria-label="add review">submit</button>
               </div>
             </div>
         </div>
