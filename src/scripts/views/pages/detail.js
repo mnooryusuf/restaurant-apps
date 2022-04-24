@@ -120,7 +120,6 @@ const Detail = {
       reviews.forEach((reviewItem) => {
         reviewsContainer.innerHTML += createRestaurantDetailReviewTemplate(reviewItem);
       });
-      alert(newReview.message);
     });
 
     LikeButtonPresenter.init({
